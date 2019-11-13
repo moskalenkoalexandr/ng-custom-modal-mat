@@ -1,0 +1,37 @@
+﻿<div>
+    <h1>Home</h1>
+
+    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+
+    <p>{{bodyText}}</p>
+    <button mat-stroked-button color="primary" (click)="openModal('custom-modal-1')">Підписати КЕП 1</button>
+    <button mat-stroked-button color="primary" (click)="openModal('custom-modal-2')">Підписати КЕП 2</button>
+
+    <!--p>{{MyText}}</p-->
+    <!--p>{{MyText64}}</p-->
+    <mat-form-field class="example-full-width">
+    <p> <input matInput placeholder="Text" [(ngModel)]="MyText" value="Sushi"/></p>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+    <p> <input matInput  placeholder="Text64" [(ngModel)]="MyText64" value="Sushi"/></p>
+</mat-form-field>
+
+    <button  mat-stroked-button color="primary" (click)="stobase()">ctobase</button>
+    <button  mat-stroked-button color="primary" (click)="basetos()">basetos</button>
+</div>
+
+<jw-modal id="custom-modal-1">
+    <h1>Підписати посадову!</h1>
+    <p>Виберіть АЦСК: <input type="text" [(ngModel)]="bodyText" /></p>
+    <p>Оберіть тип носія особистого ключа: <input type="text" [(ngModel)]="bodyText" /></p>
+    
+    <p>Особистий ключ: <input type="text" [(ngModel)]="bodyText" /></p>
+    <p>Пароль захисту ключа: <input type="text" [(ngModel)]="bodyText" /></p>
+    <button mat-stroked-button color="primary" (click)="closeModal('custom-modal-1');">Закрити вікно</button>
+    <button mat-stroked-button color="primary" (click)="closeModal('custom-modal-1');">Підписати посадову</button>
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+    <h1 style="height:500px">A Tall Custom Modal!</h1>
+    <button mat-stroked-button color="primary" (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>
